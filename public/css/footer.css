@@ -1,0 +1,117 @@
+/*********************/
+/* Footer */
+footer{
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(29, 29, 29) 70%, rgb(15, 15, 15));
+    background-repeat: no-repeat;
+}
+
+/*****/
+footer a, footer p{
+    font-weight: 300;
+}
+
+footer a{
+    transition: all 0.25s ease-in-out !important;
+}
+
+footer a:hover{
+    color: #8d8d8d !important;
+}
+
+/*****/
+
+footer .container{
+    padding: 2px;
+}
+
+footer .container .major-footer, .container .rights-reserved{
+    margin: 15px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Footer -> Major Footer (Buttons, etc) */
+footer .major-footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .major-footer .pages-redirection, .major-footer .contact, .major-footer .page-up{
+    padding: 20px;
+    width: 33.3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .major-footer .contact{
+    width: 55%;
+}
+
+/* Footer -> Pages Redirection */
+footer .pages-redirection ul li{
+    list-style: none;
+    margin: 5px 0; 
+}
+
+footer .pages-redirection li a,
+footer .major-footer .contact a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Footer -> Contact */
+footer .major-footer .contact{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Footer -> Page-Up */
+footer .major-footer .page-up button{
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Footer -> Footer Lines */
+footer .major-footer .footer-line{
+    background: white;
+    width: 2px;
+    height: 120px;
+    border-radius: 20px;
+}
+
+/* Footer -> Rights Reserved */
+footer .rights-reserved{
+    height: 15%;
+}
+
+footer .rights-reserved p{
+    text-align: center;
+}
+
+/* Footer -> Site Developer */
+footer p.site-developer{
+    width: 100%;
+    padding: 12px 5px;
+    padding-top: 0;
+    margin: 0;
+    text-align: center;
+    color: #ccc;
+    opacity: 0.7;
+}
+
+footer p.site-developer a{
+    color: #ccc;
+}

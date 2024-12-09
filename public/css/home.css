@@ -1,199 +1,4 @@
-/* Fonts Imports */
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
-/* Variables */
-:root{
-    --var-services_image_height: 400px;
-}
-
-/* Default Configs */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-}
-
-body{
-    background: linear-gradient(to bottom, rgb(70, 70, 70) 50%, rgb(46, 46, 46) 100%);
-    background-repeat: no-repeat;
-    scroll-behavior: smooth;
-}
-
 /*********************/
-
-/* Header */
-header{
-    width: 100%;
-    display: flex;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-}
-
-header .header_top-container{
-    padding: 15px;
-    z-index: 100;
-    position: absolute;
-    width: 100%;
-    height: 150px;
-    display: flex;
-    flex-direction: center;
-    align-items: center;
-    justify-content: center;
-}
-
-header .header_top-container > img{
-    width: 240px;
-    height: 170px;
-    border-radius: 15px;
-    /*background: rgba(70, 70, 70, 0.2);*/
-    background: none;
-}
-
-header nav{
-    margin-left: -200px;
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: center;
-    align-items: center;
-    justify-content: center;
-}
-
-header nav ul{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-header nav ul li{
-    list-style: none;
-    margin: 0 20px;
-}
-
-header nav ul li a{
-    padding: 10px;
-}
-
-nav ul li a,
-nav ul li a:after,
-nav ul li a:before {
-    transition: all .5s;
-    border-radius: 5px;
-}
-nav ul li a:hover {
-    color: #333;
-}
-
-header nav ul li a{
-    position: relative;
-}
-
-header nav ul li a:after{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 0%;
-    content: '.';
-    color: transparent;
-    background: #aaa;
-    height: 1px;
-}
-
-header nav ul li a{
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    font-size: 19px;
-}
-
-header nav ul li a {
-    transition: all 2s;
-}
-
-header nav ul li a:after {
-    text-align: center;
-    content: '';
-    margin: 0 auto;
-    opacity: 0;
-}
-
-header nav ul li a:hover {
-    color: #333;
-    z-index: 1;
-}
-
-header nav ul li a:hover:after {
-    z-index: -10;
-    animation: fill 1s forwards;
-    -webkit-animation: fill 1s forwards;
-    -moz-animation: fill 1s forwards;
-    opacity: 1;
-}
-
-/*********************************/
-/* Header Effects Keyframes */
-/* Keyframes */
-@keyframes fill{
-    0% {
-        width: 0%;
-        height: 1px;
-    }
-
-    50% {
-        width: 100%;
-        height: 1px;
-    }
-
-    100% {
-        width: 100%;
-        height: 100%;
-        background: white;
-    }
-}
-
-/* Header Image/Background */
-.header_background_image-container{
-    width: 100%;
-    position: relative;
-}
-
-.header_background_image-container img{
-    width: 100%;
-    box-shadow: 0 10px 5px 5px rgba(0, 0, 0 , 0.2);
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.header_background_image-container p{
-    display: none;
-    padding: 15px;
-    height: 100px;
-    position: absolute;
-    top: 25%;
-    left: 20%;
-    border-radius: 15px;
-    color: white;
-    font-size: 30px;
-}
-
-/*********************/
-/* Global Center */
-.center{
-    max-width: 1280px;
-    display: flex;
-    flex-direction: column;
-    padding: 0 2%;
-    margin: 0 auto;
-    flex-wrap: wrap;
-}
-
-/*********************/
-
 /* Section 1 - Localizations */
 section.localizations{
     margin-top: 25px;
@@ -226,16 +31,15 @@ section.localizations .local-cards_list{
     border: 10px solid #e6e6e6;
     border-radius: 5px;
     background-color: white;
-    box-shadow: 0 10px 5px 5px rgba(0, 0, 0 , 0.2);
+    box-shadow: 0 5px 9px 3px rgba(0, 0, 0 , 0.5);
 }
 
 .local-cards_list .local-card_single img{
     width: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    max-height: 160px;
+    object-fit: cover;
     border-radius: 5px;
-    box-shadow: 0 5px 5px 5px rgba(0, 0, 0 , 0.2);
+    box-shadow: 0 3px 9px 3px rgba(0, 0, 0 , 0.2);
 }
 
 .local-cards_list .local-card_single h3{
@@ -257,8 +61,12 @@ section.services{
 section.services .center > h3.section-title{
     width: 100%;
     text-align: center;
-    font-size: 35px;
+    font-size: 40px;
     color: white;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
 }
 
 section.services .center{
@@ -268,27 +76,24 @@ section.services .center{
 }
 
 section.services .services-cards_list{
-    margin-top: 25px;
-    background: linear-gradient(to bottom, rgb(49, 49, 49), rgb(10, 10, 10) 80%);
     width: 100%;
-    padding: 50px;
+    padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 10px 5px 5px rgba(0, 0, 0 , 0.2);
     position: relative;
 }
 
 .services-cards_list .services-card_single{
-    margin: 15px 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     color: white;
 }
 
 .services-card_single .image{
-    max-width: 500px;
+    min-width: 500px;
+    max-height: 250px;
     height: var(--var-services_image_height);
     overflow: hidden;
     border-radius: 10px;
@@ -296,6 +101,8 @@ section.services .services-cards_list{
 
 .services-card_single .image img{
     width: 100%;
+    max-height: 250px;
+    object-fit: cover;
     border-radius: 10px;
     background-position: center;
     background-repeat: no-repeat;
@@ -319,10 +126,15 @@ section.services .services-cards_list{
 
 .services-card_single .service-info h3{
     font-size: 35px;
+    letter-spacing: 5px;
+    border-bottom: 1px solid white;
+    display: inline-block;
 }
 
 .services-card_single .service-info p{
     font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 300;
     color: #e9e9e9;
 }
 
@@ -347,13 +159,14 @@ section.schedule .center .container-box{
     width: 60%;
     padding: 35px;
     border-radius: 5px;
-    background-color: white;
+    background-color: rgb(240, 240, 240);
     color: black;
 }
 
 section.schedule h2{
     font-weight: bold;
     font-size: 30px;
+    letter-spacing: 5px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -362,6 +175,7 @@ section.schedule a{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 300;
     width: 60%;
     padding: 15px 0;
     margin-top: 25px;
@@ -369,107 +183,14 @@ section.schedule a{
     background: rgb(49, 49, 49);
     border-radius: 5px;
     transition: all 250ms ease-in-out;
-}
-
-section.schedule a:hover{
-    background: rgb(27, 27, 27);
-    box-shadow: 0 8px 10px 2px rgba(0, 0, 0 , 0.2);
-}
-
-section.schedule a p{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-weight: bold;
     font-size: 20px;
+    letter-spacing: 2px;
     text-align: center;
     text-transform: uppercase;
     color: white;
 }
 
-/*********************/
-/* Footer */
-footer{
-    width: 100%;
-    height: auto;
-    background: linear-gradient(to bottom, rgb(29, 29, 29) 70%, rgb(15, 15, 15));
-    background-repeat: no-repeat;
-}
-
-footer .container{
-    padding: 15px;
-}
-
-footer .container .major-footer, .container .rights-reserved{
-    margin: 15px 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
-/* Footer -> Major Footer (Buttons, etc) */
-footer .major-footer{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-footer .major-footer .pages-redirection, .major-footer .contact, .major-footer .page-up{
-    padding: 20px;
-    width: 33.3%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-footer .major-footer .contact{
-    width: 55%;
-}
-
-/* Footer -> Pages Redirection */
-footer .pages-redirection ul li{
-    list-style: none;
-    margin: 5px 0; 
-}
-
-footer .pages-redirection li a{
-    text-decoration: none;
-    color: white;
-}
-
-/* Footer -> Contact */
-footer .major-footer .contact{
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Footer -> Page-Up */
-footer .major-footer .page-up button{
-    width: 40px;
-    height: 40px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-/* Footer -> Footer Lines */
-footer .major-footer .footer-line{
-    background: white;
-    width: 2px;
-    height: 120px;
-    border-radius: 20px;
-}
-
-/* Footer -> Rights Reserved */
-footer .rights-reserved{
-    height: 15%;
-}
-
-footer .rights-reserved p{
-    text-align: center;
+section.schedule a:hover{
+    background: rgb(27, 27, 27);
+    box-shadow: 0 3px 8px 2px rgba(0, 0, 0 , 0.15);
 }
