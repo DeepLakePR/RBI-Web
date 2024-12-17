@@ -15,6 +15,9 @@
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+
     <!-- Title -->
     <title>República da Barba</title>
 </head>
@@ -22,15 +25,15 @@
 <body>
     <!---------------------------------------------------->
 
-    <header> <!-- Start Header -->
+    <header class="home"> <!-- Start Header -->
         <div class="header_top-container">
             <img src="/public/assets/logo.png" /> <!-- Logo -->
 
             <nav> <!-- Start Navigation -->
                 <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#agendamento">Fazer Agendamento</a></li>
+                    <li><a href="#inicio" scroll-target="home">Início</a></li>
+                    <li><a href="#servicos" scroll-target="services">Serviços</a></li>
+                    <li><a href="#agendamento" scroll-target="schedule">Fazer Agendamento</a></li>
                 </ul>
             </nav> <!-- End Navigation -->
         </div>
@@ -200,9 +203,9 @@
             <div class="major-footer">
                 <div class="pages-redirection"> <!-- Footer Pages Redirection -->
                     <ul>
-                        <li><a href="#inicio">Início</a></li>
-                        <li><a href="#servicos">Serviços</a></li>
-                        <li><a href="#agendamento">Fazer Agendamento</a></li>
+                        <li><a href="#inicio" scroll-target="home">Início</a></li>
+                        <li><a href="#servicos" scroll-target="services">Serviços</a></li>
+                        <li><a href="#agendamento" scroll-target="schedule">Fazer Agendamento</a></li>
                     </ul>
                 </div> <!-- End Footer Pages Redirection -->
 

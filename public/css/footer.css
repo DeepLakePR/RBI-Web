@@ -28,7 +28,6 @@ footer .container{
 footer .container .major-footer, .container .rights-reserved{
     margin: 15px 0;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     color: white;
@@ -114,4 +113,70 @@ footer p.site-developer{
 
 footer p.site-developer a{
     color: #ccc;
+}
+
+/************************/
+/* Responsive */
+@media screen and (max-width: 1200px){
+
+    footer p, footer a{
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 992px){
+
+    footer .container .major-footer, .container .rights-reserved{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .pages-redirection ul{
+        padding: 0;
+        margin: 0;
+    }
+
+    footer .major-footer .pages-redirection, .major-footer .contact, .major-footer .page-up{
+        padding: 0;
+        width: 100%;
+    }
+
+    footer .major-footer .contact p{
+        width: 50%;
+    }
+
+    footer .major-footer .footer-line{
+        width: 80%;
+        height: 2px;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+    
+    footer .major-footer .contact{
+        flex-direction: column
+    }
+
+    footer .major-footer .contact p{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+    footer p, footer a{
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 360px){
+
+    footer p, footer a{
+        font-size: 14px;
+    }
+
 }
