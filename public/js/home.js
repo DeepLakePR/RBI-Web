@@ -16,7 +16,17 @@ $(()=>{
         });
 
     });
-    
+
+    /***********************/
+    // CTA Chevron Down
+    const CTA_ChevronDown = $('svg#cta-chevron-down');
+
+    CTA_ChevronDown.click(()=>{
+
+        scrollTo({ 'top': $('section.localizations').position().top - 50, 'behavior': 'smooth' });
+
+    });
+
 })
 
 /***********************/
